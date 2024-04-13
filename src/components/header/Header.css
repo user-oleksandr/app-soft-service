@@ -1,0 +1,16 @@
+.offcanvas-title {
+    color: orangered !important;
+}
+
+.nav-link {
+    font-size: 18px !important;
+    color: #B0BDD3;
+}
+
+.nav-link:hover {
+    color: orangered !important;
+    font-size: 20px !important;
+}
+.btn-close {
+    background-color: rgb(62, 68, 77) !important;
+}
