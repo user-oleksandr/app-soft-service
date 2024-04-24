@@ -22,15 +22,20 @@ const ContactsPage = () => {
         const defaultMarkerIcon = L.icon({
             iconUrl: markerIcon,
             shadowUrl: markerShadow,
-            iconSize: [20, 31], 
-            iconAnchor: [12, 41], 
-            popupAnchor: [1, -34] 
+            iconSize: [20, 31],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
         });
 
         // Маркер на карте с использованием стандартной иконки
         L.marker([48.52010962177299, 32.28209273035324], { icon: defaultMarkerIcon }).addTo(map)
-            .bindPopup("<b>Soft Age Service</b><br>Добро пожаловать!")
-            .openPopup(); 
+        .bindPopup("<b>Soft Age Service</b>" +
+                   "<br>Добро пожаловать!<br>" +
+                   "Телефон: +380123456789<br>" +
+                   "Email: <a href='mailto:info@bas.com'>info@bas.com</a><br>" +
+                   "Режим работы: Пн-Пт 9:00-18:00<br>" +  
+                   "Адрес: вул. Прикладна, 123, м. Київ, Україна<br>")  
+        .openPopup();
     }, []);
 
     return (
@@ -40,7 +45,7 @@ const ContactsPage = () => {
             </header>
             <section className="contact-info">
                 <h2>Зв'яжіться з нами</h2>
-                <p>Адреса: вул. Прикладна, 123, м. Київ, Україна</p>
+                <p>Адреса: вул. Прикладна, 123, м. Кропивницький, Україна</p>
                 <p>Телефон: <a href="tel:+380123456789">+380123456789</a></p>
                 <p>Email: <a href="mailto:info@bas.com">info@bas.com</a></p>
                 <p>Соціальні мережі:

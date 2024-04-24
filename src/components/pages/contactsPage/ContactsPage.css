@@ -63,9 +63,9 @@
   background-color: chocolate;
 }
 
-
 .leaflet-map {
   width: 100%;
   height: 500px;
   border-radius: 5px;
+  opacity: 0.8;
 }
