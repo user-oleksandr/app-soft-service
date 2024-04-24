@@ -36,11 +36,23 @@ const Header = () => {
                     <div className="side-panel">
                         <button className="close-button" onClick={closeSidePanel}>Х</button>
                         <ul>
-                            <li><NavLink to="/" onClick={(e) => { e.stopPropagation(); }}>Home</NavLink></li>
-                            <li><NavLink to="/about" onClick={(e) => { e.stopPropagation(); }}>About</NavLink></li>
-                            <li><NavLink to="/contacts" onClick={(e) => { e.stopPropagation(); }}>Contacts</NavLink></li>
-
+                            <li>
+                                <NavLink to="/" onClick={(e) => { e.stopPropagation(); }}>
+                                    <button className='link'>Home</button>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/about" onClick={(e) => { e.stopPropagation(); }}>
+                                    <button className='link'>About</button>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/contacts" onClick={(e) => { e.stopPropagation(); }}>
+                                    <button className='link'>Contacts</button>
+                                </NavLink>
+                            </li>
                         </ul>
+
                     </div>
                 )}
             </div>

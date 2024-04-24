@@ -19,28 +19,36 @@
     top: 5.5em;
     right: 0;
     width: 200px;
-    height: 100%;
+    height: max-content;
     background-color: #21252B;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .side-panel ul {
     list-style: none;
     padding: 0;
+    margin-top: 25px;
 }
 
 .side-panel ul li {
     margin-bottom: 10px;
 }
 
-.side-panel ul li a {
-    color: #fff;
-    text-decoration: none;
+.link {
+    width: 100%;
+    text-align: start;
+    border: none;
+    background-color: transparent;
+    color: #B0BDD3;
+    font-weight:500;
+    font-size: 16px;
 }
 
-.side-panel ul li a:hover {
-    color: orangered;
+.side-panel li:hover {
+    background-color: orangered;
+    border-radius: 2.5px;
 }
 
 .toggle-button {
