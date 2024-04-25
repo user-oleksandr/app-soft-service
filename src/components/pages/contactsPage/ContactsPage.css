@@ -6,28 +6,27 @@
 
 .contactsPage header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .contactsPage header h1 {
-  font-size: 2.5rem;
+  font-size: 1.5em;
   color: orangered;
 }
 
 .contactsPage .contact-info,
 .contactsPage .contact-form {
-  margin-bottom: 40px;
+  margin-bottom: 75px;
 }
 
 .contactsPage .contact-info h2,
 .contactsPage .contact-form h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: orangered;
 }
 
 .contactsPage .contact-info p {
   color: #B0BDD3;
-  margin-bottom: 10px;
 }
 
 .contactsPage .contact-form form {
@@ -65,7 +64,20 @@
 
 .leaflet-map {
   width: 100%;
-  height: 500px;
+  height: 250px;
   border-radius: 5px;
   opacity: 0.8;
+}
+
+.contact-info a {
+  color: #6ea0f7;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: orangered;
+}
+
+.marker {
+  font-size: 10px;
 }

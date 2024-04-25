@@ -7,53 +7,60 @@
 }
 
 .homePage header {
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .homePage header h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: orangered;
 }
 
-.intro {
+.homePage .intro {
   text-align: center;
+  margin-top: 5em;
   margin-bottom: 40px;
 }
 
 .homePage .intro h2 {
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: #B0BDD3;
 }
 .homePage .intro p{
   color: #B0BDD3;
 }
 
-.services {
+.homePage .services {
+  padding: 20px;
   margin-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px orangered; 
 }
 
-.services h2 {
-  font-size: 1.8rem;
+.homePage .services h2 {
+  font-size: 1.25rem;
   color: orangered;
 }
 
-.services ul {
+.homePage .services ul {
   list-style: none;
   padding: 0;
 }
 
-.services ul li {
+.homePage .services ul li {
   margin-bottom: 10px;
   color: #B0BDD3;
 }
 
 .homePage .about {
   margin-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px orangered; 
+  padding: 20px;
 }
 
 .homePage .about h2 {
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   color:orangered;
 }
 
@@ -67,7 +74,7 @@
 }
 
 .homePage .contact h2 {
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   color: orangered;
 }
 
@@ -75,7 +82,15 @@
   color: #B0BDD3;
 }
 
-.contact button {
+
+.homePage .contact {
+  margin-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px orangered; 
+  padding: 20px;
+}
+
+.homePage .contact button {
   padding: 10px 20px;
   background-color: #B0BDD3;
   border: none;
@@ -86,15 +101,15 @@
   transition: background-color 0.3s ease;
 }
 
-.contact button a {
+.homePage .contact button a {
 color: orangered;
 }
 
-.contact button:hover {
+.homePage .contact button:hover {
   background-color: rgb(255, 81, 18);
   color: black;
 }
 
-.contact button a:hover {
+.homePage .contact button a:hover {
   color: #282C34;
 }

@@ -34,7 +34,7 @@ const ContactsPage = () => {
                    "Телефон: +380123456789<br>" +
                    "Email: <a href='mailto:info@bas.com'>info@bas.com</a><br>" +
                    "Режим работы: Пн-Пт 9:00-18:00<br>" +  
-                   "Адрес: вул. Прикладна, 123, м. Київ, Україна<br>")  
+                   "Адрес: вул. Прикладна, 123, м. Київ, Україна<br>", {className: 'marker'})  
         .openPopup();
     }, []);
 
@@ -44,17 +44,18 @@ const ContactsPage = () => {
                 <h1>Контакти</h1>
             </header>
             <section className="contact-info">
-                <h2>Зв'яжіться з нами</h2>
-                <p>Адреса: вул. Прикладна, 123, м. Кропивницький, Україна</p>
+                <h2>Зв'яжіться з нами:</h2>
+                <div id="map" className="leaflet-map"></div>
+                <p>Адреса: вул. Полтавська, 1, м. Кропивницький, Україна</p>
                 <p>Телефон: <a href="tel:+380123456789">+380123456789</a></p>
                 <p>Email: <a href="mailto:info@bas.com">info@bas.com</a></p>
                 <p>Соціальні мережі:
-                    <a href="https://telegram.me/bas" target="_blank" rel="noopener noreferrer">Telegram</a>,
-                    <a href="https://www.facebook.com/bas" target="_blank" rel="noopener noreferrer">Facebook</a>,
-                    <a href="https://www.instagram.com/bas" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://telegram.me/bas" target="_blank" rel="noopener noreferrer"> Telegram </a>,
+                    <a href="https://www.facebook.com/bas" target="_blank" rel="noopener noreferrer"> Facebook </a>,
+                    <a href="https://www.instagram.com/bas" target="_blank" rel="noopener noreferrer"> Instagram </a>
                 </p>
             </section>
-            <div id="map" className="leaflet-map"></div>
+
             <ScrollToTopButton />
         </div>
     );

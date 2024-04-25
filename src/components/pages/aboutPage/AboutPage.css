@@ -1,63 +1,63 @@
-/* AboutPage.css */
+/* Основные стили */
 
 .aboutPage {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.aboutPage header {
+  text-align: center;
+  margin-bottom: 125px;
+}
+
+.aboutPage header h1 {
+  font-size: 1.5em;
+  color: orangered;
+}
+
+.aboutPage .blocks-sections {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.aboutPage .about,
+.aboutPage .team,
+.aboutPage .values {
+  margin-bottom: 75px;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1; 
+  margin-right: 20px;
+  box-shadow: 0 0 10px orangered; 
+}
+
+.aboutPage .about h2,
+.aboutPage .team h2,
+.aboutPage .values h2 {
+  font-size: 1.25em;
+  color: orangered;
+}
+
+.aboutPage .about p,
+.aboutPage .team p,
+.aboutPage .values p {
+  color: #B0BDD3;
+ 
+}
+
+.aboutPage .values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aboutPage .values li {
+  margin-bottom: 10px;
+  color: #B0BDD3;
+}
+
+@media only screen and (max-width: 1250px) {
+  .aboutPage .blocks-sections {
+    flex-direction: column; 
   }
-  
-  .aboutPage header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .aboutPage header h1 {
-    font-size: 2.5rem;
-    color: orangered;
-  }
-  
-  .aboutPage .about {
-    margin-bottom: 40px;
-  }
-  
-  .aboutPage .about h2 {
-    font-size: 2rem;
-    color: orangered;
-  }
-  
-  .aboutPage .about p {
-    color: #B0BDD3;
-  }
-  
-  .aboutPage .team {
-    margin-bottom: 40px;
-  }
-  
-  .aboutPage .team h2 {
-    font-size: 2rem;
-    color: orangered;
-  }
-  
-  .aboutPage .team p {
-    color: #B0BDD3;
-  }
-  
-  .aboutPage .values {
-    margin-bottom: 40px;
-  }
-  
-  .aboutPage .values h2 {
-    font-size: 2rem;
-    color: orangered;
-  }
-  
-  .aboutPage .values ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .aboutPage .values li {
-    margin-bottom: 10px;
-    color: #B0BDD3;
-  }
-  
+}

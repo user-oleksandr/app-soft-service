@@ -9,6 +9,7 @@ const AboutPage = () => {
                 <h1>Про нас</h1>
             </header>
 
+            <div className='blocks-sections'>
             <section className="about">
                 <h2>Хто ми?</h2>
                 <p>Компанія BAS - Bussines Automation Software - це провідна IT-компанія в Україні, яка спеціалізується на розробці програмного забезпечення для автоматизації бізнес-процесів. Наша місія - допомогти компаніям підвищити ефективність роботи за допомогою інноваційних технологій.</p>
@@ -30,6 +31,8 @@ const AboutPage = () => {
                 </ul>
             </section>
 
+            </div>
+           
             <ScrollToTopButton />
         </div>
     );
