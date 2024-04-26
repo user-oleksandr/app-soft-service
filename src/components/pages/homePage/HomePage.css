@@ -20,6 +20,8 @@
   text-align: center;
   margin-top: 5em;
   margin-bottom: 40px;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .homePage .intro h2 {
@@ -34,7 +36,7 @@
   padding: 20px;
   margin-bottom: 40px;
   border-radius: 5px;
-  box-shadow: 0 0 10px orangered; 
+  /* box-shadow: 0 0 10px orangered;  */
 }
 
 .homePage .services h2 {
@@ -55,7 +57,7 @@
 .homePage .about {
   margin-bottom: 40px;
   border-radius: 5px;
-  box-shadow: 0 0 10px orangered; 
+  /* box-shadow: 0 0 10px orangered;  */
   padding: 20px;
 }
 
@@ -86,7 +88,7 @@
 .homePage .contact {
   margin-bottom: 40px;
   border-radius: 5px;
-  box-shadow: 0 0 10px orangered; 
+  /* box-shadow: 0 0 10px orangered;  */
   padding: 20px;
 }
 

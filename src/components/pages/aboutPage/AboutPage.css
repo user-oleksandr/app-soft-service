@@ -1,4 +1,4 @@
-/* Основные стили */
+/* Основні стилі */
 
 .aboutPage {
   max-width: 80%;
@@ -8,7 +8,7 @@
 
 .aboutPage header {
   text-align: center;
-  margin-bottom: 125px;
+  margin-bottom: 30px;
 }
 
 .aboutPage header h1 {
@@ -16,48 +16,79 @@
   color: orangered;
 }
 
-.aboutPage .blocks-sections {
+.video-box {
   display: flex;
-  flex-wrap: wrap; 
+  flex-direction: column;
+  margin-bottom: 25px;
 }
 
-.aboutPage .about,
-.aboutPage .team,
-.aboutPage .values {
-  margin-bottom: 75px;
+.video-container {
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
+  position: relative;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.what-is-bas {
+  margin-bottom: 25px;
   padding: 20px;
   border-radius: 10px;
-  flex: 1; 
-  margin-right: 20px;
-  box-shadow: 0 0 10px orangered; 
+  box-shadow: 0 0 10px orangered;
 }
 
-.aboutPage .about h2,
-.aboutPage .team h2,
-.aboutPage .values h2 {
+.what-is-bas h2 {
   font-size: 1.25em;
   color: orangered;
 }
 
-.aboutPage .about p,
-.aboutPage .team p,
-.aboutPage .values p {
+.what-is-bas p {
   color: #B0BDD3;
- 
 }
 
-.aboutPage .values ul {
+.blocks-sections {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about,
+.team,
+.values {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.about h2,
+.team h2,
+.values h2 {
+  font-size: 1.25em;
+  color: orangered;
+}
+
+.about p,
+.team p,
+.values p {
+  color: #B0BDD3;
+}
+
+.values ul {
   list-style: none;
   padding: 0;
 }
 
-.aboutPage .values li {
+.values li {
   margin-bottom: 10px;
   color: #B0BDD3;
 }
 
-@media only screen and (max-width: 1250px) {
-  .aboutPage .blocks-sections {
-    flex-direction: column; 
+@media only screen and (max-width: 768px) {
+  .blocks-sections {
+    flex-direction: column;
   }
 }
