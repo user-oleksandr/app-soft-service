@@ -15,18 +15,18 @@ const AboutPage = () => {
                     <p>BAS (Business Automation Software) - це програмне забезпечення, спрямоване на автоматизацію бізнес-процесів і оптимізацію робочих потоків в організаціях. Воно дозволяє компаніям підвищити продуктивність, зменшити витрати та покращити контроль над бізнесом.</p>
                     <p>Використання BAS дозволяє автоматизувати рутинні операції, впроваджувати інноваційні технології та підвищувати ефективність в усіх сферах діяльності підприємства.</p>
                 </section>
+            </div>
 
-                <div className='video-container'>
-                    <iframe
-                        width='560'
-                        height='315'
-                        src='https://www.youtube.com/embed/1Ni2FkLTm94'
-                        frameBorder='0'
-                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                        allowFullScreen
-                        title='BAS Video'
-                    ></iframe>
-                </div>
+            <div className='video-container'>
+                <iframe
+                    width='500'
+                    height='250'
+                    src='https://www.youtube.com/embed/1Ni2FkLTm94'
+                    frameBorder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                    allowFullScreen
+                    title='BAS Video'
+                ></iframe>
             </div>
 
             <div className='blocks-sections'>

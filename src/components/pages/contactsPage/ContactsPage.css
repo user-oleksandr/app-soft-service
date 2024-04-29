@@ -63,10 +63,9 @@
 }
 
 .leaflet-map {
-  width: 100%;
+  width: 650px;
   height: 250px;
   border-radius: 5px;
-  opacity: 0.8;
 }
 
 .contact-info a {
@@ -80,4 +79,25 @@
 
 .marker {
   font-size: 10px;
+}
+
+.box-map-content {
+  display: flex;
+  margin-bottom: 175px;
+}
+
+.right-box {
+  margin-left: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .leaflet-map {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+  }
+
+  .box-map-content {
+    flex-direction: column;
+  }
 }
