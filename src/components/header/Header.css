@@ -1,115 +1,71 @@
 .navbar {
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-    height: 5.5em;
-    background-color: #21252B;
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 999;
+    left: 0;
+    right: 0;
+    background-color: #21252B;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Распределение элементов по краям */
+    align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+.title {
+    margin-left: 20px; /* Отступ слева для заголовка */
 }
 
 .nav-container {
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    height: 100%;
+    justify-content: center; /* Центрирование внутреннего контейнера */
+    flex-grow: 1; /* Занимает все доступное пространство по ширине */
 }
 
-.side-panel {
-    position: absolute;
-    top: 5.5em;
-    right: 0;
-    width: 250px;
-    height: max-content;
-    background-color: #21252B;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.side-panel ul {
-    list-style: none;
+ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    margin-top: 50px;
-}
-
-.side-panel ul li {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
 }
 
 .link {
-    width: 100%;
-    text-align: start;
+    background: none;
     border: none;
-    background-color: transparent;
-    color: #B0BDD3;
-    font-weight:500;
-    font-size: 16px;
-}
-
-.side-panel li:hover {
-    background-color: orangered;
-    border-radius: 2.5px;
-}
-
-.toggle-button {
-    background-color: transparent;
-    color: #B0BDD3;
-    border: none;
+    color: white;
     cursor: pointer;
-    font-size: 2em;
-    padding-right: 25px;
 }
 
-.toggle-button:hover {
+.link:hover {
     color: orangered;
 }
 
-.close-button {
-    background-color: transparent;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.dropdown-menu {
+    display: block;
     position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    font-size: 20px;
+    background-color: #21252B;
+    min-width: 120px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    margin-top: 5px;
+    font-size: 12px;
 }
 
-.close-button:hover {
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline;
     color: orangered;
 }
 
-.title {
-    color: #B0BDD3;
-    font-size: 25px;
-    margin: 0 auto;
-    text-align: center;
-    flex-grow: 1;
-}
-
-@media (max-width: 768px) {
-    .side-panel {
-        width: 100%;
-        height: max-content;
-        top: 0;
-    }
-
-    .side-panel ul {
-        margin-top: 50px;
-        padding: 0 25px;
-    }
-
-    .side-panel ul li {
-        margin-bottom: 10px;
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    .close-button {
-        font-size: 25px;
-    }
+.dropdown-arrow {
+    margin-left: 5px;
+    font-size: 8px;
 }

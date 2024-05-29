@@ -1,60 +1,68 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
-    const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [currentPageTitle, setCurrentPageTitle] = useState(''); 
+    const location = useLocation();
 
-    const toggleSidePanel = () => {
-        setIsSidePanelOpen(!isSidePanelOpen);
+    React.useEffect(() => {
+        const path = location.pathname;
+        switch (path) {
+            case '/':
+                setCurrentPageTitle('Home');
+                break;
+            case '/about':
+                setCurrentPageTitle('About');
+                break;
+            case '/contacts':
+                setCurrentPageTitle('Contacts');
+                break;
+            default:
+                setCurrentPageTitle('');
+                break;
+        }
+    }, [location.pathname]);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
     };
 
-    const closeSidePanel = () => {
-        setIsSidePanelOpen(false);
+    const closeDropdown = () => {
+        setIsDropdownOpen(false);
     };
-
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (isSidePanelOpen && !event.target.closest('.side-panel') && !event.target.closest('.toggle-button')) {
-                setIsSidePanelOpen(false);
-            }
-        };
-
-        document.addEventListener('click', handleClickOutside);
-
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, [isSidePanelOpen]);
 
     return (
-        <nav className="navbar">
+        <nav className="navbar" onMouseLeave={closeDropdown}>
+             <div className="title">Soft-Age-Service</div>
             <div className="nav-container">
-                <div className="title">Soft-Age-Service</div>
-                <button className="toggle-button" onClick={toggleSidePanel}>☰</button>
-                {isSidePanelOpen && (
-                    <div className="side-panel">
-                        <button className="close-button" onClick={closeSidePanel}>Х</button>
-                        <ul>
-                            <li>
-                                <NavLink to="/" onClick={(e) => { e.stopPropagation(); }}>
-                                    <button className='link'>Home</button>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/about" onClick={(e) => { e.stopPropagation(); }}>
-                                    <button className='link'>About</button>
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/contacts" onClick={(e) => { e.stopPropagation(); }}>
-                                    <button className='link'>Contacts</button>
-                                </NavLink>
-                            </li>
-                        </ul>
-
-                    </div>
-                )}
+                <ul>
+                    <li>
+                        <button className='link' onMouseEnter={toggleDropdown}>
+                            {currentPageTitle} <span className="dropdown-arrow">&#9660;</span>
+                        </button>
+                        {isDropdownOpen && (
+                            <ul className="dropdown-menu">
+                                <li>
+                                    <NavLink to="/" onClick={closeDropdown}>
+                                        Home
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/about" onClick={closeDropdown}>
+                                        About
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/contacts" onClick={closeDropdown}>
+                                        Contacts
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        )}
+                    </li>
+                </ul>
             </div>
         </nav>
     );
